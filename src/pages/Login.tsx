@@ -45,14 +45,12 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center px-4">
 
-      {/* Glow de fundo sutil — referência visual do site da Onda */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-600/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative w-full max-w-sm">
 
-        {/* Logo */}
         <div className="mb-8 text-center">
           <div className="inline-flex items-center gap-2.5 mb-6">
             <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
@@ -68,11 +66,9 @@ export default function Login() {
           </p>
         </div>
 
-        {/* Card do formulário */}
         <div className="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6 backdrop-blur-sm">
           <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
 
-            {/* Email */}
             <div className="space-y-1.5">
               <Label htmlFor="email" className="text-zinc-300 text-sm">
                 E-mail
@@ -90,7 +86,6 @@ export default function Login() {
               )}
             </div>
 
-            {/* Senha */}
             <div className="space-y-1.5">
               <Label htmlFor="password" className="text-zinc-300 text-sm">
                 Senha
@@ -118,14 +113,12 @@ export default function Login() {
               )}
             </div>
 
-            {/* Erro do servidor */}
             {serverError && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2.5">
                 <p className="text-red-400 text-sm">{serverError}</p>
               </div>
             )}
 
-            {/* Submit */}
             <Button
               type="submit"
               disabled={isSubmitting}
@@ -140,7 +133,6 @@ export default function Login() {
           </form>
         </div>
 
-        {/* Moedas suportadas — referência ao produto real */}
         <div className="mt-4 flex items-center justify-center gap-2 flex-wrap">
           {['USD', 'BRL', 'EUR', 'USDT', 'USDC'].map((currency) => (
             <span
@@ -152,7 +144,6 @@ export default function Login() {
           ))}
         </div>
 
-        {/* Credenciais de teste */}
         <div className="mt-3 bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-4">
           <p className="text-zinc-500 text-xs font-medium mb-2">Credenciais de teste</p>
           <p className="text-zinc-400 text-xs font-mono">gabriel@email.com</p>
