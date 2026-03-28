@@ -21,7 +21,7 @@ function formatAmount(amount: number, currency: string) {
 function TransactionSkeleton() {
   return (
     <div className="flex items-center gap-3 py-3 animate-pulse">
-      <div className="w-9 h-9 rounded-full bg-zinc-800 flex-shrink-0" />
+      <div className="w-9 h-9 rounded-full bg-zinc-800 shrink-0" />
       <div className="flex-1 space-y-1.5">
         <div className="h-3 w-32 bg-zinc-800 rounded" />
         <div className="h-2.5 w-20 bg-zinc-800 rounded" />
@@ -35,7 +35,7 @@ function TransactionItem({ tx }: { tx: Transaction }) {
   const isCredit = tx.type === 'credit'
   return (
     <div className="flex items-center gap-3 py-3 border-b border-zinc-800/60 last:border-0">
-      <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 ${
+      <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${
         isCredit ? 'bg-blue-500/10' : 'bg-zinc-800'
       }`}>
         {isCredit
@@ -47,7 +47,7 @@ function TransactionItem({ tx }: { tx: Transaction }) {
         <p className="text-sm text-white truncate">{tx.description}</p>
         <p className="text-xs text-zinc-500 truncate">{tx.recipient}</p>
       </div>
-      <div className="text-right flex-shrink-0">
+      <div className="text-right shrink-0">
         <p className={`text-sm font-medium ${isCredit ? 'text-blue-400' : 'text-white'}`}>
           {isCredit ? '+' : '-'}{formatAmount(tx.amount, tx.currency)}
         </p>
