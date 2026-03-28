@@ -19,10 +19,15 @@ export async function loginMock(email: string, password: string) {
 
 export async function getTransactionsMock(): Promise<Transaction[]> {
   await delay(600)
-  return mockTransactions
+  return [...mockTransactions]
 }
 
-export async function transferMock(amount: number, recipient: string, description: string) {
+export async function transferMock(
+  amount: number,
+  recipient: string,
+  description: string,
+  currency: Transaction['currency'] = 'BRL',
+) {
   await delay(1000)
 
   if (amount <= 0) {
@@ -33,6 +38,7 @@ export async function transferMock(amount: number, recipient: string, descriptio
     id: String(Date.now()),
     type: 'debit',
     amount,
+    currency,
     description,
     recipient,
     date: new Date().toISOString().split('T')[0],
