@@ -4,7 +4,7 @@ Aplicação web simulando um app bancário com foco em organização, UX e boas 
 
 ## Acesso rápido
 
-- **Aplicação:** 
+- **Aplicação:**  https://onda-finance-front.vercel.app
 - **Credenciais de teste:** `gabriel@email.com` / `123456`
 
 ---
